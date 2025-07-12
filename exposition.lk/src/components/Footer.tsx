@@ -48,12 +48,14 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-6 group">
               <div className="relative">
                 <img
-                  src="/expo/EXPO LOGO.png"
+                  src="/expo/assets/expo-logo.png"
                   alt="Exposition Logo"
                   className="h-32 w-auto group-hover:scale-110 transition-all duration-300"
                   onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling!.style.display = 'block';
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.style.display = 'none';
+                    const next = img.nextElementSibling as HTMLElement | null;
+                    if (next) next.style.display = 'block';
                   }}
                 />
                 <span className="hidden text-2xl font-bold bg-gradient-to-r from-amber-600 to-amber-400 bg-clip-text text-transparent">
