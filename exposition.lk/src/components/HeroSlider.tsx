@@ -4,27 +4,16 @@ import { ChevronLeft, ChevronRight, Play, ArrowRight } from 'lucide-react';
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  
+
   const slides = [
-    {
-      image: 'https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      title: 'Exposition',
-      subtitle: 'University Magazine Excellence',
-      description: 'Discover groundbreaking research, inspiring stories, and the future of education through our comprehensive magazine platform',
-    },
-    {
-      image: 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      title: 'Research & Innovation',
-      subtitle: 'Showcasing Academic Brilliance',
-      description: 'Explore cutting-edge discoveries and innovative solutions that shape tomorrow\'s world',
-    },
-    {
-      image: 'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      title: 'Community Impact',
-      subtitle: 'Building Academic Excellence',
-      description: 'Connecting knowledge with real-world solutions and fostering meaningful partnerships',
-    },
+    'https://exposition.lk/static/media/ga15.ff0e01d3c075891814ff.jpg',
+    'https://exposition.lk/static/media/ga17.2c83b8d6f98a77c4c098.jpg',
+    'https://exposition.lk/static/media/ga16.c54d2b2285a14f24a765.jpg',
   ];
+
+  const slideLogo = '/public/EXPO LOGO.png';
+  const slideSubtitle = 'University Magazine Excellence';
+  const slideDescription = 'Discover groundbreaking research, inspiring stories, and the future of education through our comprehensive magazine platform';
 
   useEffect(() => {
     setIsLoaded(true);
@@ -46,7 +35,7 @@ const HeroSlider = () => {
     <section id="home" className="relative h-screen overflow-hidden">
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0">
-        {slides.map((slide, index) => (
+        {slides.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-all duration-1000 ${
@@ -54,8 +43,8 @@ const HeroSlider = () => {
             }`}
           >
             <img
-              src={slide.image}
-              alt={slide.title}
+              src={image}
+              alt="Exposition"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
@@ -72,44 +61,41 @@ const HeroSlider = () => {
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center text-center z-10">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4 w-full">
           <div className={`transform transition-all duration-1000 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-amber-600/20 backdrop-blur-sm border border-amber-600/30 rounded-full text-amber-400 text-sm font-medium mb-4">
-                Academic Excellence
-              </span>
+            {/* Logo with optimized sizing and reduced spacing */}
+            <div className="flex flex-col items-center">
+              <img 
+                src={slideLogo} 
+                alt="Exposition Logo"
+                className="h-[180px] sm:h-[240px] md:h-[320px] lg:h-[400px] xl:h-[480px] w-auto max-w-[98vw] object-contain" 
+              />
+              <div className="w-full max-w-2xl mx-auto">
+                <p className="text-xl md:text-3xl text-[#f1b759] mt-2 mb-1 font-light">
+                  {slideSubtitle}
+                </p>
+                <p className="text-lg text-white/80 mb-6 leading-relaxed">
+                  {slideDescription}
+                </p>
+              </div>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-amber-200 to-amber-300 bg-clip-text text-transparent leading-tight">
-                {slides[currentSlide].title}
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-3xl text-amber-400 mb-4 font-light">
-              {slides[currentSlide].subtitle}
-            </p>
-            
-            <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-              {slides[currentSlide].description}
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="group relative overflow-hidden bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-black font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-600/25">
-                <div className="flex items-center space-x-3">
+
+            {/* CTA Buttons with reduced top margin */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
+              <button className="group relative overflow-hidden bg-gradient-to-r from-[#f1b759] to-[#d1a93a] hover:from-[#d1a93a] hover:to-[#b18b20] text-black font-semibold px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#f1b759]/25">
+                <div className="flex items-center space-x-2">
                   <Play className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                   <span>E-Magazine</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
               </button>
-              
-              <button className="group relative overflow-hidden border-2 border-amber-600/50 hover:border-amber-500 text-white hover:text-black font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                <span className="relative z-10">Learn More</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-500 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+
+              <button className="group relative overflow-hidden border-2 border-[#f1b759]/50 hover:border-[#d1a93a] text-white hover:text-black font-semibold px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                  <span className="relative z-10">Our Legacy</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#f1b759] to-[#d1a93a] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
               </button>
             </div>
           </div>
@@ -119,13 +105,13 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 p-3 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full text-white hover:text-amber-500 transition-all duration-300 z-20 hover:scale-110"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 p-3 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full text-white hover:text-[#f1b759] transition-all duration-300 z-20 hover:scale-110"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 p-3 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full text-white hover:text-amber-500 transition-all duration-300 z-20 hover:scale-110"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 p-3 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full text-white hover:text-[#f1b759] transition-all duration-300 z-20 hover:scale-110"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
@@ -138,12 +124,12 @@ const HeroSlider = () => {
             onClick={() => setCurrentSlide(index)}
             className={`relative overflow-hidden transition-all duration-300 ${
               index === currentSlide 
-                ? 'w-12 h-3 bg-amber-600 rounded-full' 
+                ? 'w-12 h-3 bg-[#f1b759] rounded-full' 
                 : 'w-3 h-3 bg-white/50 hover:bg-white/70 rounded-full'
             }`}
           >
             {index === currentSlide && (
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f1b759] to-[#d1a93a] rounded-full animate-pulse"></div>
             )}
           </button>
         ))}
@@ -156,6 +142,9 @@ const HeroSlider = () => {
           <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
         </div>
       </div>
+
+      {/* Bottom Gradient Overlay to blend into next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-900 z-10 pointer-events-none" />
     </section>
   );
 };

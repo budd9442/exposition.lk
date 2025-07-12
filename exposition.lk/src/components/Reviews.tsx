@@ -108,7 +108,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-bl from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
@@ -117,16 +117,16 @@ const Reviews = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full text-amber-300 text-sm font-medium mb-6">
+          {/* <div className="inline-block px-4 py-2 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full text-amber-300 text-sm font-medium mb-6">
             Testimonials
-          </div>
+          </div> */}
           <h2 className="text-5xl md:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#e3c767] via-[#aa7d39] to-[#B78F5A] bg-clip-text text-transparent">
               Community Voices
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Hear from our distinguished faculty, accomplished students, and dedicated staff about their experience with our magazine
+            Our Success Stories
           </p>
         </div>
 
@@ -164,7 +164,7 @@ const Reviews = () => {
                   </div>
                   
                   <div className="flex space-x-1">
-                    {renderStars(reviews[currentReview].rating)}
+                    {/* {renderStars(reviews[currentReview].rating)} */}
                   </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@ const Reviews = () => {
               </div>
               
               <div className="flex mb-4">
-                {renderStars(review.rating)}
+                {/* {renderStars(review.rating)} */}
               </div>
               
               <div className="relative">
@@ -258,10 +258,11 @@ const Reviews = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: '98%', label: 'Satisfaction Rate' },
-            { number: '50K+', label: 'Monthly Readers' },
-            { number: '200+', label: 'Featured Stories' },
-            { number: '15+', label: 'Awards Won' },
+            // 20+ Years. 5+ Segments, 100+ Partners, 20+ Issues
+            { number: '20+', label: 'Years' },
+            { number: '5+', label: 'Segments' },
+            { number: '100+', label: 'Partners' },
+            { number: '20+', label: 'Issues' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent mb-2">
