@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-6 group">
               <div className="relative">
                 <img
-                  src="/public/EXPO LOGO.png"
+                  src="/expo/EXPO LOGO.png"
                   alt="Exposition Logo"
                   className="h-32 w-auto group-hover:scale-110 transition-all duration-300"
                   onError={(e) => {

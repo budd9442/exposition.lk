@@ -5,7 +5,7 @@ const speakers = [
   {
     name: 'Andy Lark',
     title: 'Global Brand & Marketing Expert',
-    photo: '/assets/speakers/1.jpeg',
+    photo: '/expo/assets/speakers/1.jpeg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 20',
     description:
@@ -18,7 +18,7 @@ const speakers = [
   {
     name: 'Dr. Maya Patel',
     title: 'AI Researcher & Keynote Speaker',
-    photo: '/assets/speakers/2.jpg',
+    photo: '/expo/assets/speakers/2.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 19',
     description:
@@ -30,7 +30,7 @@ const speakers = [
   {
     name: 'Prof. John Smith',
     title: 'Dean of Engineering, Tech University',
-    photo: '/assets/speakers/3.jpg',
+    photo: '/expo/assets/speakers/3.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 18',
     description:
@@ -42,7 +42,7 @@ const speakers = [
   {
     name: 'Ms. Aisha Rahman',
     title: 'Entrepreneur & Industry Leader',
-    photo: '/assets/speakers/4.jpg',
+    photo: '/expo/assets/speakers/4.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 17',
     description:

@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex items-center space-x-4 group">
             <div className="relative">
               <img 
-                src="/public/EXPO LOGO.png" 
+                src="/expo/EXPO LOGO.png" 
                 alt="Exposition Logo" 
                 className="h-[170px] w-auto group-hover:scale-110 transition-all duration-300"
                 onError={(e) => {
