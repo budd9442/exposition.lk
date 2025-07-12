@@ -39,7 +39,7 @@ const Header = () => {
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling!.style.display = 'block';
+                  (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
                 }}
               />
               <span className="hidden text-3xl font-bold bg-[#f1b759] bg-clip-text text-transparent">

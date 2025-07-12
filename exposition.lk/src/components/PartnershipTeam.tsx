@@ -16,7 +16,7 @@ const members: Member[] = [
     title: 'Editor-in-Chief',
     email: 'lavindubinuwara1@gmail.com',
     phone: '+94 71 684 6120',
-    image: '/src/assets/team/lavindu.png',
+    image: '/assets/team/lavindu.png',
     linkedin: 'https://www.linkedin.com/in/lavindubinuwara',
   },
   {
@@ -24,7 +24,7 @@ const members: Member[] = [
     title: 'Editor-in-Chief',
     email: 'uduwageh@gmail.com',
     phone: '+94 77 247 4149',
-    image: '/src/assets/team/hashani.png',
+    image: '/assets/team/hashani.png',
     linkedin: 'https://www.linkedin.com/in/hashaniuduwage',
   },
   {
@@ -32,7 +32,7 @@ const members: Member[] = [
     title: 'Partnership Coordinator',
     email: 'akilabenaragama@gmail.com',
     phone: '+94 77 582 6664',
-    image: '/src/assets/team/akila.png',
+    image: '/assets/team/akila.png',
     linkedin: 'https://www.linkedin.com/in/akilabenaragama',
   },
   {
@@ -40,7 +40,7 @@ const members: Member[] = [
     title: 'Partnership Coordinator',
     email: 'nevindimunasinghe@gmail.com',
     phone: '071 684 6120',
-    image: '/src/assets/team/nevindi.png',
+    image: '/assets/team/nevindi.png',
     linkedin: 'https://www.linkedin.com/in/nevindimunasinghe',
   },
 ];

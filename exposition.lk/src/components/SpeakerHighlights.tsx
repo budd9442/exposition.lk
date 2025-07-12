@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import speaker1 from '../assets/speakers/1.jpeg';
-import speaker2 from '../assets/speakers/2.jpg';
-import speaker3 from '../assets/speakers/3.jpg';
-import speaker4 from '../assets/speakers/4.jpg';
 
 const speakers = [
   {
     name: 'Andy Lark',
     title: 'Global Brand & Marketing Expert',
-    photo: speaker1,
+    photo: '/assets/speakers/1.jpeg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 20',
     description:
@@ -22,7 +18,7 @@ const speakers = [
   {
     name: 'Dr. Maya Patel',
     title: 'AI Researcher & Keynote Speaker',
-    photo: speaker2,
+    photo: '/assets/speakers/2.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 19',
     description:
@@ -34,7 +30,7 @@ const speakers = [
   {
     name: 'Prof. John Smith',
     title: 'Dean of Engineering, Tech University',
-    photo: speaker3,
+    photo: '/assets/speakers/3.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 18',
     description:
@@ -46,7 +42,7 @@ const speakers = [
   {
     name: 'Ms. Aisha Rahman',
     title: 'Entrepreneur & Industry Leader',
-    photo: speaker4,
+    photo: '/assets/speakers/4.jpg',
     leftLabel: 'Exposition',
     rightLabel: 'Issue 17',
     description:
