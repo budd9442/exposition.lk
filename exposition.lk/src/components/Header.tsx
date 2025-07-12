@@ -45,7 +45,7 @@ const Header = () => {
               <span className="hidden text-3xl font-bold bg-[#f1b759] bg-clip-text text-transparent">
                 Exposition
               </span>
-              <div className="absolute inset-0 bg-[#f1b759]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
             </div>
           </div>
 

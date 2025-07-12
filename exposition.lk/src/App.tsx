@@ -9,6 +9,7 @@ import PartnershipPackages from './components/PartnershipPackages';
 import Footer from './components/Footer';
 import PartnershipTeam from './components/PartnershipTeam';
 import SpeakerHighlights from './components/SpeakerHighlights';
+import PartnershipSummary from './components/PartnershipSummary';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <SpeakerHighlights />
       <Reviews />
       <PartnershipTree />
+      
       {/* <PartnershipPackages /> */}
       <PartnershipTeam />
       <Footer />

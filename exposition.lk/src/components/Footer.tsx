@@ -59,7 +59,7 @@ const Footer = () => {
                 <span className="hidden text-2xl font-bold bg-gradient-to-r from-amber-600 to-amber-400 bg-clip-text text-transparent">
                   Exposition
                 </span>
-                <div className="absolute inset-0 bg-amber-600/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed text-lg mb-6">

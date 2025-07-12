@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, Gem, Star, Shield, Crown, ChevronRight, X } from 'lucide-react';
+import PartnershipSummary from './PartnershipSummary';
 
 type Partnership = {
   id: string;
@@ -32,10 +33,10 @@ const PartnershipCard: React.FC<PartnershipCardProps & { onReadMore: () => void 
       backgroundColor: partnership.bgColor,
     }}
   >
-    <div className={`absolute inset-0 bg-gradient-to-br ${partnership.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
+    <div className={`absolute inset-0 bg-gradient-to-bl ${partnership.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
     <div className="relative z-10 text-center h-full flex flex-col justify-center">
       <div
-        className={`inline-flex items-center justify-center ${isLarge ? 'w-20 h-20' : 'w-16 h-16'} bg-gradient-to-br ${partnership.color} rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto`}
+        className={`inline-flex items-center justify-center ${isLarge ? 'w-20 h-20' : 'w-16 h-16'} bg-gradient-to-bl ${partnership.color} rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto`}
       >
         {partnership.icon}
       </div>
@@ -48,7 +49,7 @@ const PartnershipCard: React.FC<PartnershipCardProps & { onReadMore: () => void 
       <p className="text-gray-300 text-sm leading-relaxed flex-grow">{partnership.description}</p>
       <button
         onClick={(e) => { e.stopPropagation(); onReadMore(); }}
-        className="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-[#e3c767] to-[#aa7d39] text-black font-semibold shadow hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#e3c767]/50"
+        className="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-l from-[#e3c767] to-[#aa7d39] text-black font-semibold shadow hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#e3c767]/50"
       >
         Read More <ChevronRight className="w-4 h-4" />
       </button>
@@ -192,14 +193,14 @@ const PartnershipTree: React.FC = () => {
   };
 
   return (
-    <section id="partnerships" className="py-24 bg-gradient-to-br from-black via-gray-900 to-black">
+    <section id="partnerships" className="py-24 bg-gradient-to-bl from-black via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-[#aa7d39]/20 border border-[#aa7d39]/30 rounded-full text-[#e3c767] text-sm font-medium mb-6">
             Partnership Ecosystem
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#e3c767] via-[#aa7d39] to-[#B78F5A] bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-l from-[#e3c767] via-[#aa7d39] to-[#B78F5A] bg-clip-text text-transparent">
             Partnerships
           </h2>
         </div>
@@ -258,7 +259,7 @@ const PartnershipTree: React.FC = () => {
                   <X className="w-6 h-6" />
                 </button>
                 <div className="flex flex-col items-center text-center">
-                  <div className={`w-16 h-16 flex items-center justify-center rounded-xl mb-4 text-white bg-gradient-to-br ${modalPartnership.color}`}>{modalPartnership.icon}</div>
+                  <div className={`w-16 h-16 flex items-center justify-center rounded-xl mb-4 text-white bg-gradient-to-bl ${modalPartnership.color}`}>{modalPartnership.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-2">{modalPartnership.level}</h3>
                   {modalPartnership.investment && (
                     <p className="text-[#e3c767] font-medium text-lg mb-2">{modalPartnership.investment}</p>
@@ -269,6 +270,7 @@ const PartnershipTree: React.FC = () => {
               </div>
             </div>
           )}
+          <PartnershipSummary />
         </AnimatePresence>
       </div>
     </section>
